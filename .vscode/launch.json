@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run Maisonelle",
+            "request": "launch",
+            "mainClass": "com.maisonelle.Main",
+            "projectName": "Maisonelle",
+            "vmArgs": "-Dapple.awt.application.name=Maisonelle -Dapple.laf.useScreenMenuBar=true"
+        },
+        {
+            "type": "java",
+            "name": "Run Maisonelle Tests",
+            "request": "launch",
+            "mainClass": "com.maisonelle.MaisonelleTestRunner",
+            "projectName": "Maisonelle"
+        }
+    ]
+}

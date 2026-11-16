@@ -1,0 +1,30 @@
+================================================================================
+                               M A I S O N E L L E                              
+                      A little luxury, thoughtfully curated.                    
+================================================================================
+ TAX INVOICE & ORDER RECEIPT
+--------------------------------------------------------------------------------
+ Order ID     : ORD-20261116-4074              Date : 16 Nov 2026, 08:30 PM
+ Payment Mode : UPI                            Status: CONFIRMED
+--------------------------------------------------------------------------------
+ CUSTOMER & SHIPPING DETAILS
+ Name    : Test Buyer
+ Email   : buyer@test.com
+ Phone   : 9999999999
+ Address : 12 Park St, Delhi - 110001
+================================================================================
+ #    Item Description                       Qty    Unit Price   Total       
+--------------------------------------------------------------------------------
+ 1    Sony WH-1000XM5 Studio Headphones      1      ₹29,990.00   ₹29,990.00  
+--------------------------------------------------------------------------------
+ Cart Subtotal                                      :      ₹29,990.00
+ Statutory GST (18%)                                :       ₹5,398.20
+ Delivery & Logistics Fee                           :            FREE
+================================================================================
+ FINAL PAYABLE AMOUNT                               :      ₹35,388.20
+================================================================================
+
+ Thank you for shopping with Maisonelle.
+ For customer support & luxury assistance, contact: support@maisonelle.com
+ Registered Office: 12 Rue de la Paix, Bandra Kurla Complex, Mumbai - 400051
+================================================================================
