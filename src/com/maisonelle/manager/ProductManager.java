@@ -89,6 +89,14 @@ public class ProductManager {
         return false;
     }
 
+    public synchronized List<Product> search(String query) {
+        return filterAndSort("All", query, "Name: A to Z");
+    }
+
+    public synchronized List<Product> filterByCategory(String category) {
+        return filterAndSort(category, "", "Price: Low to High");
+    }
+
     public synchronized List<Product> filterAndSort(String category, String searchQuery, String sortBy) {
         return products.stream()
                 .filter(p -> {

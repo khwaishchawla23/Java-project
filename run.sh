@@ -1,6 +1,6 @@
 #!/bin/bash
 # ==============================================================================
-# Maisonelle - Desktop Application Launcher
+# Maisonelle - Terminal Application Launcher
 # Tagline: A little luxury, thoughtfully curated.
 # ==============================================================================
 set -e
@@ -42,9 +42,5 @@ if [ ! -f "bin/com/maisonelle/Main.class" ]; then
     ./build.sh
 fi
 
-echo "Launching Maisonelle Desktop Application..."
-exec "$JAVA_CMD" \
-    -Dapple.awt.application.name="Maisonelle" \
-    -Dapple.laf.useScreenMenuBar=true \
-    -cp "bin:resources" \
-    com.maisonelle.Main "$@"
+echo "Launching Maisonelle Terminal Edition..."
+exec "$JAVA_CMD" -cp "bin" com.maisonelle.Main "$@"

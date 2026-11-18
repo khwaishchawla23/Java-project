@@ -3,8 +3,9 @@ package com.maisonelle.util;
 import com.maisonelle.model.CartItem;
 import com.maisonelle.model.Order;
 
-import java.awt.Desktop;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,7 +13,7 @@ import java.text.DecimalFormat;
 
 /**
  * Generates clean, elegant, human-readable text invoices (.txt)
- * using standard Java File I/O. Strictly no third-party PDF dependencies.
+ * using standard Java File I/O. Strictly Java 21 Standard JDK Built-ins only.
  */
 public class InvoiceGenerator {
 
@@ -90,16 +91,18 @@ public class InvoiceGenerator {
         return invoiceFile;
     }
 
-    public static void openInvoiceFile(File file) {
+    public static void printInvoiceToTerminal(File file) {
         if (file == null || !file.exists()) {
+            System.out.println("[Error] Invoice file not found.");
             return;
         }
-        try {
-            if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.OPEN)) {
-                Desktop.getDesktop().open(file);
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
             }
-        } catch (Exception e) {
-            System.err.println("Could not open invoice file automatically: " + e.getMessage());
+        } catch (IOException e) {
+            System.err.println("Could not display invoice file: " + e.getMessage());
         }
     }
 }
