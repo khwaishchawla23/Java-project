@@ -7,14 +7,16 @@
             "request": "launch",
             "mainClass": "com.maisonelle.Main",
             "projectName": "Maisonelle",
-            "vmArgs": "-Dapple.awt.application.name=Maisonelle -Dapple.laf.useScreenMenuBar=true"
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build Maisonelle"
         },
         {
             "type": "java",
             "name": "Run Maisonelle Tests",
             "request": "launch",
             "mainClass": "com.maisonelle.MaisonelleTestRunner",
-            "projectName": "Maisonelle"
+            "projectName": "Maisonelle",
+            "console": "integratedTerminal"
         }
     ]
 }

@@ -32,4 +32,10 @@ find src -name "*.java" > sources.txt
 "$JAVAC_CMD" -d bin -sourcepath src @sources.txt
 rm -f sources.txt
 
+if [ -d "test" ]; then
+    find test -name "*.java" > test_sources.txt
+    "$JAVAC_CMD" -d bin -sourcepath "src:test" @test_sources.txt
+    rm -f test_sources.txt
+fi
+
 echo "Build successful! Classes compiled to bin/"
